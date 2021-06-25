@@ -1,0 +1,30 @@
+<h2>Por país</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="buscar()" autocomplete="off">
+            <input type="text" class="form-control" name="termino" [(ngModel)]="termino" placeholder="Buscar pais...">
+        </form>
+    </div>
+</div>
+
+<hr>
+
+<div class="alert alert-secondary text-center" role="alert">
+    No hay resultados con ese termino.
+</div>
+
+<div class="row row-cols-1 row-cols-md-5 g-4 mt-3">
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://restcountries.eu/data/mex.svg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">México</h6>
+          <p class="card-text">13522 Habitantes</p>
+          <a href="#" class="btn btn-outline-primary w-100">Ver país</a>
+        </div>
+      </div>
+    </div>
+    
+</div>
+
