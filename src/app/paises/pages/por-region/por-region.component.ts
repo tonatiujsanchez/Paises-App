@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PaisesService } from '../../services/paises.service';
+import { Pais } from '../../interfaces/pais.interfaces';
 
 @Component({
   selector: 'app-por-region',
@@ -13,4 +15,5 @@ export class PorRegionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }
