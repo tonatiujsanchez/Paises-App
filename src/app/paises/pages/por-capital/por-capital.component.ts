@@ -13,6 +13,7 @@ export class PorCapitalComponent implements OnInit {
   termino: string = '';
   hayError: boolean = false;
   paises: Pais[] = [];
+  paisesSugeridos: Pais[] = [];
 
   constructor( private paisesService: PaisesService  ) { }
 
@@ -29,12 +30,25 @@ export class PorCapitalComponent implements OnInit {
       .subscribe( (paises) =>{
 
         this.paises = paises;
+        this.paisesSugeridos = [];
         
       },(err)=>{
 
         this.hayError = true;
         this.paises = [];
       })
+  }
+
+  sugerencias( termino: any ){
+    this.hayError = false;
+    this.termino = termino;
+    
+    this.paisesService.porCapital( termino )
+      .subscribe( paises =>{
+        this.paisesSugeridos = paises;
+      },(err)=>{
+        this.paisesSugeridos = [];
+      });
   }
 
 }

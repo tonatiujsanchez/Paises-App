@@ -1,0 +1,23 @@
+<!-- debouncer: Sugerencias -->
+<ul class="list-group">
+    <li *ngIf="paisesSugeridos.length > 0"
+        (click)="buscar( termino )"
+        class="list-group-item list-group-item-action">
+        <strong>Buscar: </strong>{{ termino }}
+    </li>
+    <div *ngIf="page === 'pais'">
+        <li *ngFor="let pais of paisesSugeridos"
+            [routerLink]="['/pais', pais.alpha2Code ]"
+            class="list-group-item list-group-item-action">
+            {{ pais.name }}
+        </li>
+    </div>
+    <div *ngIf="page === 'capital'">
+        <li *ngFor="let pais of paisesSugeridos"
+            [routerLink]="['/pais', pais.alpha2Code ]"
+            class="list-group-item list-group-item-action">
+            {{ pais.capital }} <small>({{ pais.name }})</small>
+        </li>
+    </div>
+</ul>
+<!--END: debouncer: Sugerencias -->

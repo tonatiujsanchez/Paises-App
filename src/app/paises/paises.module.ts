@@ -10,6 +10,7 @@ import { PorRegionComponent } from './pages/por-region/por-region.component';
 import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
 import { PaisesResultadosComponent } from './components/paises-resultados/paises-resultados.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
+import { SugerenciasComponent } from './components/sugerencias/sugerencias.component';
 
 
 
@@ -20,7 +21,8 @@ import { BuscarComponent } from './components/buscar/buscar.component';
     PorRegionComponent,
     VerPaisComponent,
     PaisesResultadosComponent,
-    BuscarComponent
+    BuscarComponent,
+    SugerenciasComponent
   ],
   exports:[
     PorCapitalComponent,
